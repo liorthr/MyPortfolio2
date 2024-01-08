@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tahar_Lior_ITCPrecourse</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://kit.fontawesome.com/c86af54b49.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <div id="header">
+        <div class="cotainer">
+            <nav>
+                <img src="images/logoLior2.png" alt="logoLior">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="../Tahar_Lior_ITCPrecourse /pages/about.html">About</a></li>
+                    <li><a href="../Tahar_Lior_ITCPrecourse /pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        <div class="header-text">
+            <p>Israel Tech Challenge Pre-Course</p>
+            <h1>ITC Fullstack <span>Development</span>.</h1>
+        </div>
+    </div>
+</div>
+<!----------services--------->
+<div id="services">   
+    <div class="container">
+        <h1 class="sub-title"> My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-chart-pie"></i>
+                <h2>Ads Analytics</h2>
+                <p>Data analyses for 3 campaign in MetaAds and GoogleAds</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design/ Seo</h2>
+                <p>Development in Wordpress without coding/ Optimize a SEO of a website</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <h2>Social Medias</h2>
+                <p> Knowledge of Facebook, Instagram, X</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------portfolio------------->
+<div id="portfolio">
+    <div class="container">
+         <h1 class="sub-title"> My Work</h1>
+         <div class="work-list">
+            <div class="work">
+                <img src="images/social-media.jpg" alt="a changer">
+                <div class="layer">
+                    <h3>Social Medias</h3>
+                    <p>I manage the Facebook accounts of three different companies,
+                         optimizing their online presence for a broader audience and enhanced visibility.
+                    </p>
+                    <a href="https://www.facebook.com/profile.php?id=100094266842565"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/facebook-ads.jpg" alt="a changer">
+                <div class="layer">
+                    <h3>Facebbok/Google Ads</h3>
+                    <p>I managed the advertising campaigns of an online training company. 
+                        I had to generate leads.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/wp-dev.jpg" alt="a changer">
+                <div class="layer">
+                    <h3>Wordpress developer</h3>
+                    <p>I created an online site for selling solar panels. 
+                        I also had to generate leads for my companies
+                    </p>
+                    <a href="https://confortgreenhouse.com/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright<i class="fa-regular fa-copyright"></i> Lior Tahar. 28/10/2023</p>
+    
+</div>
+
+<!---------------JS---------------------->
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents");  
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }    
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby6I22MQV3QVMSVlhAnIXLNOi9Z4azGaRdUBdzuVUfDwLPibOQXub0ZxQe1BS7xJ8ePwg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+
+
+  </script>
+  <script>
+    let n = langs.length;
+    const langs = ["HTML", "CSS", "JavaScript", "Python", "Language5", "Language6"];
+    let text = "This website was build using ";
+
+switch (n) {
+  case 1:
+    text += langs[0] + ".";
+    break;
+  case 2:
+    text += langs[0] + " and " + langs[1] + ".";
+    break;
+  default:
+    for (let i = 0; i < langs.length; i++) {
+      if (i == langs.length - 1) {
+        text += "and " + langs[i] + ".";
+      } else {
+        text += langs[i] + ", ";
+      }
+    }
+}
+
+  </script>
+     
+
+ </body>
+</html>
+
+
+
+

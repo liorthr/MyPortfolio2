@@ -10,16 +10,18 @@
         <div class="cotainer">
             <nav>
                 <img src="images/logoLior2.png" alt="logoLior">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
         <div class="header-text">
-            <p>Wordpress/ Ads Analytics</p>
+            <p>Lead developer/ UX Designer</p>
             <h1>Hi, I'm <span>Lior</span><br>Tahar from Paris</h1>
         </div>
     </div>
@@ -48,21 +50,24 @@
                        </div>
                        <div class="tab-contents active-tab" id="skills">
                         <ul>
+                            <li><span>Lead developer</span><br>I developped 2 applications with 2 teams</li>
                             <li><span>Ads Analytics</span><br>Analyses of leads product</li>
                             <li><span>Wordpress development</span><br>Design website</li>
-                            <li><span>Social Medias</span><br>Account and adversiting gestion</li>
+                            <li><span>UX/UX Design</span><br>I designed 2 applications</li>
                         </ul>
                        </div>
                        <div class="tab-contents" id="experience">
                         <ul>
+                            <li><span>CEO of 2 app</span><br>I build and drive 2 project</li>
                             <li><span>Ads Analytics</span><br>Manager of campaign lead on MetaAds and GoogleAds</li>
                             <li><span>Delivery Manager</span><br>In pest control workshop</li>
-                            <li><span>Commercial</span><br>For disabled company</li>
+                            <li><span>Team manager</span><br>For Keren Rachbi Association</li>
                         </ul>
                        </div>
                        <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>July to August 2023</span><br>Mathematics course at ITC University</li>
+                            <li><span>December to August</span><br>Full Stack coding course at Developper Institute</li>
+                            <li><span>July to August 2023</span><br>Mathematics course at Reichman University</li>
                             <li><span>2022 to 2023</span><br> Yeshiva Daat Menahem in Jerusalem</li>
                             <li><span>2015 to 2022</span><br>Sinai Heikhal Menahem</li>
                         </ul>
@@ -76,6 +81,12 @@
     <div class="container">
         <h1 class="sub-title"> My Services</h1>
         <div class="services-list">
+            <div>
+                <i class="fa-solid fa-folder-tree"></i>
+                <h2>Manage a project</h2>
+                <p>Gestion of 2 teams, one of 5 people and another with 2</p>
+                <a href="#">Learn more</a>
+            </div>
             <div>
                 <i class="fa-solid fa-chart-pie"></i>
                 <h2>Ads Analytics</h2>
@@ -103,6 +114,16 @@
     <div class="container">
          <h1 class="sub-title"> My Work</h1>
          <div class="work-list">
+            <div class="work">
+                <img src="images/google-ads.jpg" alt="a changer">
+                <div class="layer">
+                    <h3>Monitor of 2 application project</h3>
+                    <p>I manage the Google accounts of three different companies,
+                         optimizing their online presence for a broader audience and enhanced visibility.
+                    </p>
+                    <a href="https://formawork.fr/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
             <div class="work">
                 <img src="images/google-ads.jpg" alt="a changer">
                 <div class="layer">
@@ -157,7 +178,7 @@
                     <input type="text" name="Name" placeholder="Your name" required>
                     <input type="email" name="Email" placeholder="Your mail" required >
                     <textarea name="Message" rows="6" placeholder="Your message"></textarea>
-                    <button type="submit" class="button-submit">Submit       <i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" class="button-submit">Submit      <i class="fa-solid fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -200,8 +221,16 @@
             .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         })
+
+        let sidemenuJs = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenuJs.style.right = "0"
+        }
+        function closemenu(){
+            sidemenuJs.style.right = "-200px"
+        }
       </script>
     
 
     </body>
-</html>-->
+</html>

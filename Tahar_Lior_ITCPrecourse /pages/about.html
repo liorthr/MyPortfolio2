@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tahar_Lior_ITCPrecourse</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="https://kit.fontawesome.com/c86af54b49.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <div id="header">
+        <div class="cotainer">
+            <nav>
+                <img src="../images/logoLior2.png" alt="logoLior">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Tahar_Lior_ITCPrecourse /pages/about.html">About</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Israel Tech Challenge Pre-Course</p>
+                <h1>About <span>me</span></h1>
+            </div>
+    </div>
+</div>
+    <body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../images/users.png" alt="LiorWorking">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Passionate about computers since my childhood,
+                     I'm a digital creator determined to explore the many facets of technology. 
+                     My journey is marked with innovative projects, 
+                     from programming to web design and cybersecurity.
+                      I enjoy pushing the boundaries of creativity and solving complex problems.
+                       My commitment to technical excellence drives my professional path</p>
+
+                       <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Ads Analytics</span><br>Analyses of leads product</li>
+                            <li><span>Wordpress development</span><br>Design website</li>
+                            <li><span>Social Medias</span><br>Account and adversiting gestion</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Ads Analytics</span><br>Manager of campaign lead on MetaAds and GoogleAds</li>
+                            <li><span>Delivery Manager</span><br>In pest control workshop</li>
+                            <li><span>Commercial</span><br>For disabled company</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>July to August 2023</span><br>Mathematics course at ITC University</li>
+                            <li><span>2022 to 2023</span><br> Yeshiva Daat Menahem in Jerusalem</li>
+                            <li><span>2015 to 2022</span><br>Sinai Heikhal Menahem</li>
+                        </ul>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about2">
+        <div class="container">
+            <div class="row">
+                <div class="about2-col-1">
+                    <h1 class="sub-title">Some informations</h1>
+                    <p>I was born in Paris, 19th arondissment.<br> 
+                        Over the years,
+                         I've had the opportunity to explore<br>and enjoy the vibrant cultures of various cities.<br>
+                          Some of the cities I've visited <br>include New York, Dubaï, and Cozumel in Mexico.<br>
+                          These experiences have broadened my perspective<br>and enriched my understanding of different places and people.</p>
+                          <a href="https://www.google.com/maps" target="_blank" class="google-maps-button">See in Google Maps</a>
+                </div>
+                </div>
+                <div class="about2-col-2">
+                    <img src="../images/paris.jpg" alt="paris in google maps">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright<i class="fa-regular fa-copyright"></i> Lior Tahar. 28/10/2023</p>
+    </div>
+
+    <!---------------JS---------------------->
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents");  
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }    
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby6I22MQV3QVMSVlhAnIXLNOi9Z4azGaRdUBdzuVUfDwLPibOQXub0ZxQe1BS7xJ8ePwg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+    </body>
+    
+</html>
